@@ -17,4 +17,12 @@ class SupportController extends Controller
 
         return view('admin/supports/index', compact('supports')); //ou '** ['supports' => $supports] **' vai dar na mesma;
     }
+
+    public function create(){
+        return view('admin/supports/create');
+    }
+
+    public function store(Request $request){
+        dd($request->all());
+    }
 }
